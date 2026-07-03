@@ -1,0 +1,112 @@
+const QUESTIONS_DATA = [
+  {
+    id: 1,
+    question: "Apa fungsi utama dari Hooks 'useState' di React/Preact?",
+    options: [
+      "Untuk membuat komponen baru",
+      "Untuk menyimpan dan memanipulasi data status (state) di dalam komponen",
+      "Untuk mengambil data dari API secara otomatis",
+      "Untuk mengatur gaya CSS komponen"
+    ],
+    correctAnswer: "Untuk menyimpan dan memanipulasi data status (state) di dalam komponen"
+  },
+  {
+    id: 2,
+    question: "Manakah penulisan dependency array yang benar jika kita ingin 'useEffect' hanya berjalan SATU KALI saat komponen pertama kali dimuat?",
+    options: [
+      "Tidak perlu menulis dependency array sama sekali",
+      "[state]",
+      "[]",
+      "['once']"
+    ],
+    correctAnswer: "[]"
+  },
+  {
+    id: 3,
+    question: "Bagaimana cara mengirim data atau fungsi dari komponen induk (Bapak) ke komponen anak?",
+    options: [
+      "Menggunakan Local Storage",
+      "Menggunakan Fetch API",
+      "Menggunakan Props",
+      "Menggunakan State"
+    ],
+    correctAnswer: "Menggunakan Props"
+  },
+  {
+    id: 4,
+    question: "Apa yang akan terjadi jika kita mengubah state secara langsung tanpa menggunakan fungsi pengubahnya (setter), contoh: 'state = dataBaru'?",
+    options: [
+      "Komponen tidak akan merender ulang tampilan, sehingga UI tidak berubah",
+      "Aplikasi langsung otomatis crash total",
+      "Data langsung tersimpan ke Local Storage",
+      "Komponen tetap merender ulang dengan normal"
+    ],
+    correctAnswer: "Komponen tidak akan merender ulang tampilan, sehingga UI tidak berubah"
+  },
+  {
+    id: 5,
+    question: "Dalam JavaScript/JSX, metode string apa yang digunakan untuk membersihkan spasi kosong (whitespace) di awal dan akhir teks input form?",
+    options: [
+      ".clean()",
+      ".split()",
+      ".slice()",
+      ".trim()"
+    ],
+    correctAnswer: ".trim()"
+  },
+  {
+    id: 6,
+    question: "Mengapa kita tidak boleh memanggil fungsi 'fetch()' API langsung di dalam bodi komponen tanpa wrap 'useEffect' atau event handler?",
+    options: [
+      "Karena fetch API tidak didukung oleh Preact",
+      "Karena akan menyebabkan loop render tak terbatas (Infinite Loop Render) yang bikin crash",
+      "Karena data yang diambil akan otomatis terhapus",
+      "Karena fetch API hanya bisa berjalan di file balkan .js biasa"
+    ],
+    correctAnswer: "Karena akan menyebabkan loop render tak terbatas (Infinite Loop Render) yang bikin crash"
+  },
+  {
+    id: 7,
+    question: "Kapan waktu yang tepat menggunakan file berextension '.jsx' dibanding '.js' biasa?",
+    options: [
+      "Saat kita ingin menulis kode logika Backend saja",
+      "Saat kita ingin menulis fungsi penukar data murni (seperti shuffle)",
+      "Saat file tersebut berisi struktur tampilan UI (HTML di dalam JavaScript)",
+      "Saat kita ingin membuat koneksi ke database database"
+    ],
+    correctAnswer: "Saat file tersebut berisi struktur tampilan UI (HTML di dalam JavaScript)"
+  },
+  {
+    id: 8,
+    question: "Jika kita mengirim fungsi ke props, kenapa kita menulisnya tanpa kurung, contoh: 'onDelete={hapusData}'?",
+    options: [
+      "Agar fungsi tersebut langsung dieksekusi saat halaman dimuat",
+      "Agar kita hanya mengoper referensi fungsinya saja, sehingga anak yang menentukan kapan dieksekusi",
+      "Karena Preact akan error jika mendeteksi tanda kurung di dalam props",
+      "Agar fungsi tersebut otomatis tersimpan di Local Storage"
+    ],
+    correctAnswer: "Agar kita hanya mengoper referensi fungsinya saja, sehingga anak yang menentukan kapan dieksekusi"
+  },
+  {
+    id: 9,
+    question: "Apa singkatan dari JSX?",
+    options: [
+      "JavaScript XML",
+      "Java Syntax Extension",
+      "JavaScript Xerox",
+      "JSON Extension"
+    ],
+    correctAnswer: "JavaScript XML"
+  },
+  {
+    id: 10,
+    question: "Manakah cara yang benar untuk mengubah data teks string menjadi object JSON saat mengambil data dari Local Storage?",
+    options: [
+      "JSON.stringify(localStorage.getItem('key'))",
+      "JSON.parse(localStorage.getItem('key'))",
+      "localStorage.getItem('key').toObject()",
+      "JSON.convert(localStorage.getItem('key'))"
+    ],
+    correctAnswer: "JSON.parse(localStorage.getItem('key'))"
+  }
+];
