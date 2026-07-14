@@ -1,0 +1,54 @@
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0, .02), 0 2px 4px -1px rgba(0,0,0,.02);
+    border-radius: 16px;
+    margin-top: 2rem; 
+}
+
+.header {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #505b6b;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+}
+
+.check {
+    font-size: 4em;
+    color: rgba(0, 181, 0, 0.848);
+    text-align: center;
+}
+
+.btnBox {
+    margin-top: 5em;
+    text-align: center;
+    padding: 10px;
+}
+
+.btn {
+    padding: 0.8rem 1.6rem;
+    background-color: transparent;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.horizon {
+    border-top: 1px solid #9ba3ab;
+}

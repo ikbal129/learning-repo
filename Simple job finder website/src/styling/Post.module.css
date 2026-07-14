@@ -1,0 +1,150 @@
+/* ==========================================================================
+   1. LAYOUT & CONTAINER STYLING
+   ========================================================================== */
+.container {
+    max-width: 1000px;
+    margin: 3rem auto 5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   2. HEADER / HERO INTRO STYLING
+   ========================================================================== */
+.headerSection {
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.75rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   3. FORM CARD STYLING
+   ========================================================================== */
+.formCard {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.formGroup label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* ==========================================================================
+   4. INPUT, SELECT, & TEXTAREA CONTROL
+   ========================================================================== */
+.formControl {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.formControl:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.formControl::placeholder {
+    color: #94a3b8;
+}
+
+/* Untuk area deskripsi pekerjaan */
+textarea.formControl {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ==========================================================================
+   5. FLEX LAYOUT (Untuk Gaji Minimal & Maksimal Berdampingan)
+   ========================================================================== */
+.rowGrid {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.rowGrid > div {
+    flex: 1; /* Biar input kiri dan kanan punya lebar yang sama rata */
+}
+
+/* ==========================================================================
+   6. RADIO GROUP (Untuk Tipe Waktu Kerja)
+   ========================================================================== */
+.radioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0.25rem 0;
+    margin: 1.3em 0;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #475569;
+    cursor: pointer;
+    font-weight: 500 !important; /* Override label utama */
+}
+
+.radioLabel input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb; /* Mengubah warna lingkaran radio menjadi biru modern */
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   7. BUTTON STYLING
+   ========================================================================== */
+.btnSubmit {
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 0.5rem;
+}
+
+.btnSubmit:hover {
+    background-color: #1d4ed8;
+}
+
+.btnSubmit:active {
+    transform: scale(0.98);
+}
