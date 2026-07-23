@@ -1,39 +1,28 @@
 const fs = require("fs");
 const filePath = require("path");
-
-// Set path note.json persis di folder yang sama dengan script ini
 const path = filePath.join(__dirname, "note.json");
 console.log(path)
 
-// Fungsi pelindung database
 function initDatabase() {
     const defaultData = [
         {id: 0, content: ""}
     ]
-    // 1. Cek apakah filenya ada?
     if (!fs.existsSync(path)) {
-        // Kalau gak ada, buat baru isinya array kosong
         fs.writeFileSync(path, JSON.stringify(defaultData), "utf-8");
     } else {
-        // 2. Kalau ada, cek apakah isinya aman dari tangan usil user?
         try {
             const rawData = fs.readFileSync(path, "utf-8");
             const parsedData = JSON.parse(rawData);
 
-            // Pastikan isinya beneran Array. 
-            // Kalau user ngide ngubah jadi {} atau string biasa, kita paksa error!
             if (!Array.isArray(parsedData)) {
                 throw new Error("Data bukan array!");
             }
         } catch (error) {
-            // Kalau JSON parse gagal (berantakan) atau bukan array,
-            // langsung timpa ulang paksa jadi array kosong []
             fs.writeFileSync(path, JSON.stringify(defaultData), "utf-8");
         }
     }
 }
 
-// Jalankan sistem proteksinya sebelum baca data!
 initDatabase();
 
 let listData = JSON.parse(fs.readFileSync(path, "utf-8"));
