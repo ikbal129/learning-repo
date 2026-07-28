@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<%- include("./partial/header.ejs") %>
+<body>
+
+    <%- include("./partial/navbar.ejs") %>
+
+    <div class="blogs content">
+        <h2>All Blogs</h2>
+        <div class="details-wrap">
+            <% if (locals.blog != undefined && locals.blog.length > 0) { %>
+                <% blog.forEach(item => { %>
+                    <a href="/blogs/<%= item.id %>">
+                        <h3 class="title"><%= item.title %></h3>
+                        <p class="snippet"><%= item.snippet %></p>
+                    </a>
+                    
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
