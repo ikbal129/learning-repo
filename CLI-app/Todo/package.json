@@ -1,0 +1,16 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "to do list CLI app",
+  "license": "ISC",
+  "author": "ikbal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gas": "node index.js"
+  },
+  "dependencies": {
+    "sqlite3": "^6.0.1"
+  }
+}
