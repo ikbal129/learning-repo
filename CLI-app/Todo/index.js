@@ -49,24 +49,20 @@ class DB_Handler {
     }
 
     deleteByID(id) {
-        this.getID().then(res => {
-            if (res.includes(Number(id))) {
-                this.database.run('DELETE FROM todo WHERE id=?', [id], (err) => {
-                    if (err) return errorHandle({message: "INVALID ID"});
-                    console.log(`\x1b[32m[SUCCESS]\x1b[0m Deleted todo item with ID: ${id}`);
-                })
-            } else {
-                return errorHandle({message: "INVALID ID"})
-            }
+        const sql = "DELETE FROM todo WHERE id=?";
+
+        this.database.run(sql, [id], (err) => {
+            if (err) return errorHandle({message: "INVALID ID"});
+
+            console.log(`\x1b[32m[SUCCESS]\x1b[0m Deleted todo item with ID: ${id}`);
+            
         })
     }
 
     doneById(id) {
         const sql = "UPDATE todo SET status = NOT status WHERE id = ?";
-        const numId = Number(id);
 
-        if (isNaN(numId)) return errorHandle({message: "INVALID ID"})
-        this.database.run(sql, [Number(id)], function(err) {
+        this.database.run(sql, [id], function(err) {
             if (err) return errorHandle({message: "INVALID ID"});;
             if (this.changes == 0) {
                 return errorHandle({message: "INVALID ID"})
@@ -158,10 +154,13 @@ function methodHandler(meth, args) {
         handleList(type)
         break;
     case "--done":
-        db.doneById(args)
+        const doneId = Number(args);
+        if (isNaN(doneId)) return errorHandle({message: "INVALID ID"})
+        db.doneById(doneId)
         break;
     case "--delete":
-        const queryId = args;
+        const queryId = Number(args);
+        if (isNaN(queryId)) return errorHandle({message: "INVALID ID"})
         db.deleteByID(queryId)
         break;
     default:
