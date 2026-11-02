@@ -1,0 +1,20 @@
+[
+  {
+    "number": "1001",
+    "customer_name": "Ikbal",
+    "balance": 500,
+    "pin": "123456"
+  },
+  {
+    "number": "oto1",
+    "customer_name": "Budi Santoso",
+    "balance": 20000,
+    "pin": "765098"
+  },
+  {
+    "number": "3on7",
+    "customer_name": "Susanti",
+    "balance": 10000,
+    "pin": "180226"
+  }
+]
